@@ -1,0 +1,22 @@
+{
+  "name": "monday0",
+  "homepage": "https://github.com/danielopatich/homework_week6_monday",
+  "authors": [
+    "Daniel Opatich <daniel.opatich@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "neat": "~1.7.2",
+    "moment": "~2.10.6"
+  }
+}
