@@ -27,14 +27,13 @@ var Posts = Backbone.View.extend({
    var collection = new EveryonesStuff()
    var newUser = new NewPosts()
 
-  collection.fetch(console.log("posts"))
-
    var submitPost = NewPosts({
      title: title,
      text: text
    });
 
    submitPost.save();
+   postsCollection.add(submitPost);
  },
 
   sendClick: function(event){
@@ -43,16 +42,17 @@ var Posts = Backbone.View.extend({
  },
 
   render: function() {
-    var userNewData = this.collection.toJSON();
-    this.$el.html(this.template({
-      userNewData: userNewData
-      }));
-   var postTemplate = $('#postTemplate').html();
-   this.$el.html(postTemplate);
-   return this;
+    var data = this.collection.toJSON();
+    this.$el.html(this.template(data));
+    return this;
   }
 });
 
-var blogPost = new Posts();
-$('main').append(blogPost.render().el)
+var posts = new Posts();
+var postsCollection = new EveryonesStuff();
+
+posts.render();
+$('main').append(posts.el)
+
+
 // END VIEWS //
