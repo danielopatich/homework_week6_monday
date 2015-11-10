@@ -1,7 +1,5 @@
-App.Models.Session = Backbone.Model.extend({
-  url: '',
-  defaults: {
-    : '',
-    : ''
-  }
+// MODEL //
+var App.Model.Posts = Backbone.Model.extend({
+  url: 'tiny-starburst.herokuapp.com/collections/posts',
 });
+// END MODEL //
